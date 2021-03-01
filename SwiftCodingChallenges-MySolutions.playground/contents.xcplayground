@@ -10,5 +10,7 @@
         <page name='FizzBuzz'/>
         <page name='RandomNumInRange'/>
         <page name='RandomPracticePage'/>
+        <page name='NumberIsPrime'/>
+        <page name='CountingBinaryOnes'/>
     </pages>
 </playground>
