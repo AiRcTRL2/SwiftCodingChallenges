@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true'>
+    <pages>
+        <page name='Max3DifferentLetters'/>
+        <page name='StringExtension'/>
+        <page name='ReturnLongestPrefix'/>
+        <page name='CountLetterOccurrences'/>
+        <page name='StringPermutations'/>
+        <page name='ReverseWordsInString'/>
+        <page name='FizzBuzz'/>
+        <page name='RandomNumInRange'/>
+        <page name='RandomPracticePage'/>
+    </pages>
+</playground>
