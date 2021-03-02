@@ -10,7 +10,8 @@ func findMatchingBinaryOnes(_ int: Int) -> (Int?, Int?) {
     /// Convert to base 2 & count occurrences of "1"
     /// - Returns: The count of ones
     func countOnes(_ int: Int) -> Int {
-        // Neat way to convert an int to binary representation and count the ones using .reduce
+        // Neat way to convert an int to binary representation and count the ones using .reduce(into:)
+        // Note that we could use filter since we don't need a count on the zeroes, but I like to extrapolate this problem to a real world scenario where I may need to check various existing elements in the result, so using this solution is slightly different that what could be achieved answering this question
         String(int, radix: 2).reduce(into: [:]) { counts, letter in counts[letter, default: 0] += 1 }["1"] ?? 0
     }
     
@@ -22,6 +23,7 @@ func findMatchingBinaryOnes(_ int: Int) -> (Int?, Int?) {
     
     let requiredOnes = countOnes(int)
     
+    // The complexity of this loop does end up being O(n^2) as most methods that operate on strings are also linear. There may be no way to avoid O(n^2) in this problem, as each iteration of the loop requires you to parse a new number into binary - which, based on my current thinking, will always require a nested loop.
     while (nextHighest == nil || nextLowest == nil) {
         // break the loop if we have not found a suitable number within the range
         if positiveIncrement > Int.max && negativeIncrememt < Int.min {
@@ -46,5 +48,6 @@ func findMatchingBinaryOnes(_ int: Int) -> (Int?, Int?) {
     return (nextHighest, nextLowest)
 }
 
+// expected result (17, 10)
 print(findMatchingBinaryOnes(12))
 //: [Next](@next)

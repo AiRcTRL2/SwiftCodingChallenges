@@ -12,5 +12,10 @@
         <page name='RandomPracticePage'/>
         <page name='NumberIsPrime'/>
         <page name='CountingBinaryOnes'/>
+        <page name='BinaryReverse'/>
+        <page name='IntegerDisguisedAsString'/>
+        <page name='SumOfDigitsInAString'/>
+        <page name='ManualSquareRootCalc'/>
+        <page name='SubtractWithoutSubtract'/>
     </pages>
 </playground>
